@@ -1,0 +1,63 @@
+/// **** FONT VARIABLES **** ///
+
+//Font family
+$font-family-sans-serif: 'Nunito', sans-serif !default;
+
+//Body Font Sizes
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875;       //14px
+$font-size-md:                $font-size-base * 1.125;    // 18px
+$font-size-lg:                $font-size-base * 1.25;    // 20 px
+
+//Body Line Heights
+$line-height-base:            1.5;
+$line-height-sm:              1.25;
+
+
+//Heading Font Sizes
+$h1-font-size:                 3.5rem;              //  68px
+
+
+
+//Font Weights
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+$font-weight-bolder:          bolder;
+$font-weight-base:            $font-weight-normal;
+
+
+
+/// **** COLORS VARIABLES  **** ///
+
+// Descriptive naming
+$color-gray-dark:#545454;
+$color-martinique: #353252;
+$color-jacarta:#372865;
+$color-black:#000000;
+$color-white:#FFFFFF; 
+$color-selago:#F6F9FE;
+$color-prelude:#CCC1E6;
+
+
+
+// Functional naming
+$heading-color: $color-martinique;
+$body-color: $color-gray-dark;
+$border-color:$color-black;
+$button-bg-color:$color-jacarta;
+$background-color: $color-selago;
+$tag-bg-color:$color-jacarta;
+$tag-txt-color:$color-prelude;
+
+
+
+
+
+//TRANSITIONS
+$transitions: (
+    slow: .5s,
+    med: .3s,
+    fast: .1s
+) !default;

@@ -1,0 +1,127 @@
+/// **** LAYOUT STYLES **** ///
+.layout{
+    &__container--background{
+        background-color: $background-color;
+        border-radius: .625rem;
+        margin: 1.5rem;
+        min-height: 100vh;
+        padding-bottom: 4rem;
+
+        @include respond-to(sm){
+            margin: 1rem;
+        }
+    }
+
+    &__container--main{
+        @include container;
+    }
+}
+
+/// **** HEADER STYLES **** ///
+.header{
+    padding-top: 2.5rem;
+    padding-bottom: 8rem;
+
+    @include respond-to(md){
+        padding-bottom: 5rem;
+    }
+
+    @include respond-to(sm){
+        padding-bottom: 3.5rem;
+    }
+}
+
+
+/// **** HERO STYLES **** ///
+.hero{
+    @include flex-center-vert;
+    padding-bottom: 7.5rem;
+
+    @include respond-to(md){
+        text-align: center;
+        padding-bottom: 3.5rem;
+    }
+
+    &__heading{
+        @include heading(main-heading);
+        padding-bottom: 1.5rem;
+
+        @include respond-to(sm){
+            font-size: 2.5rem;
+            line-height: 3rem;
+        }
+    }
+
+    &__description{
+        padding-bottom: 1.5rem;
+    }
+
+    &__image-container{
+        width: 80%;
+        margin-left: 4rem;
+
+        @include respond-to(md){
+            display: none;
+        }
+    }
+
+    &__tag{
+        @include body(tag-txt);
+        padding: .5rem 1.5rem;
+        display: inline-block;
+        background-color: $tag-bg-color;
+        border-radius: 62.4375rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__tag-link{
+        @include body(tag-link)
+    }
+}
+
+
+
+/// **** HERO CTA **** ///
+.cta{
+    display: flex;
+    @include respond-to(sm){
+        flex-direction: column;
+    }
+
+    &__input{
+        padding: 1.125rem 1.5rem;
+        width: 60%;
+        margin-right: 1rem;
+        border-radius: .3125rem;
+        border:solid rgba(227, 227, 227, 1) .0625rem;
+
+        @include respond-to(sm){
+            margin-right: 0rem;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+    }
+
+    &__button{
+        @include respond-to(sm){
+            @include full-width-button;
+        }
+    }
+}
+
+::placeholder{
+    @include body(placeholder-txt);
+}
+
+.footer{
+    padding-top: 3.5rem;
+    text-align: right;
+    @include body(main-body--bold);
+
+    @include respond-to(xs){
+        text-align: center;
+    }
+}
+
+
+
