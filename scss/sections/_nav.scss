@@ -51,7 +51,8 @@
     /*MOBILE NAV*/
     &__hidden{
         @include respond-to(md){
-            background-color: $mobile-bg-color;
+            background-color: $mobile-nav-bg-color;
+            backdrop-filter: blur(10px);
             position: absolute;
             top:0;
             left:0;
