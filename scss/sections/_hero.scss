@@ -17,19 +17,31 @@
     }
 }
 
+
 /// **** HEADER STYLES **** ///
 .header{
     padding-top: 2.5rem;
     padding-bottom: 8rem;
 
+
+    /**************************/
+    /* BELOW 992px (Small Laptop)*/
+    /**************************/
+
     @include respond-to(md){
         padding-bottom: 5rem;
     }
+
+
+    /**************************/
+    /*   BELOW 768px (Tablet)  */
+    /**************************/
 
     @include respond-to(sm){
         padding-bottom: 3.5rem;
     }
 }
+
 
 
 /// **** HERO STYLES **** ///
@@ -45,11 +57,6 @@
     &__heading{
         @include heading(main-heading);
         padding-bottom: 1.5rem;
-
-        @include respond-to(sm){
-            font-size: 2.5rem;
-            line-height: 3rem;
-        }
     }
 
     &__description{
@@ -59,10 +66,6 @@
     &__image-container{
         width: 80%;
         margin-left: 4rem;
-
-        @include respond-to(md){
-            display: none;
-        }
     }
 
     &__tag{
@@ -77,16 +80,34 @@
     &__tag-link{
         @include body(tag-link)
     }
-}
 
+
+    /**************************/
+    /* BELOW 992px (Small Laptop)*/
+    /**************************/
+    &__image-container{
+        @include respond-to(md){
+            display: none;
+        }
+    }
+    
+
+    /**************************/
+    /*  BELOW 768px (Tablet)   */
+    /**************************/
+    &__heading{
+        @include respond-to(sm){
+            font-size: 2.5rem;
+            line-height: 3rem;
+        }
+    }
+
+}
 
 
 /// **** HERO CTA **** ///
 .cta{
-    display: flex;
-    @include respond-to(sm){
-        flex-direction: column;
-    }
+    @include flex-center-vert;
 
     &__input{
         padding: 1.125rem 1.5rem;
@@ -94,12 +115,15 @@
         margin-right: 1rem;
         border-radius: .3125rem;
         border:solid rgba(227, 227, 227, 1) .0625rem;
+    }
 
-        @include respond-to(sm){
-            margin-right: 0rem;
-            margin-bottom: 1rem;
-            width: 100%;
-        }
+
+    /**************************/
+    /*  BELOW 768px (Tablet)  */
+    /**************************/
+
+    @include respond-to(sm){
+        flex-direction: column;
     }
 
     &__button{
@@ -107,7 +131,16 @@
             @include full-width-button;
         }
     }
+
+    &__input{
+        @include respond-to(sm){
+            margin-right: 0rem;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+    }
 }
+
 
 ::placeholder{
     @include body(placeholder-txt);
@@ -117,6 +150,11 @@
     padding-top: 3.5rem;
     text-align: right;
     @include body(main-body--bold);
+
+
+    /**************************/
+    /*  BELOW 480px (Mobile)  */
+    /**************************/
 
     @include respond-to(xs){
         text-align: center;

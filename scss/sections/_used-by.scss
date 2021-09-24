@@ -10,9 +10,17 @@
         grid-template-columns: repeat(7, 1fr);
         gap: 1rem;
 
+        /**************************/
+        /*  BELOW 768px (Tablet)  */
+        /**************************/
+
         @include respond-to(md){
             width: 70%;
         }
+
+        /**************************/
+        /*  BELOW 480px (Mobile)  */
+        /**************************/
 
         @include respond-to(xs){
             width: 100%;

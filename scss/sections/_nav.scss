@@ -21,36 +21,14 @@
             
     }
 
-    &__hidden{
-        @include respond-to(md){
-            background-color: rgba(255, 255, 255, 0.97);
-            position: absolute;
-            top:0;
-            left:0;
-            width:100%;
-            height: 100vh;
-            display:flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.5s ease-in;
-            flex-direction:column;
-            opacity: 0;
-			pointer-events: none;
-            visibility: hidden;
-        }
-    }
-    
-
     &__item{
         margin-right: 1.5rem;
-        
-        @include respond-to(md){
-            margin-right: 0rem;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
     }
 
+
+    /**************************/
+    /* BELOW 992px (Small Laptop)*/
+    /**************************/
 
     &__button{
         @include respond-to(md){
@@ -59,8 +37,35 @@
 
     }
 
+    &__item{        
+        @include respond-to(md){
+            margin-right: 0rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+    }
+
+
+
 
     /*MOBILE NAV*/
+    &__hidden{
+        @include respond-to(md){
+            background-color: $mobile-bg-color;
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height: 100vh;
+            @include flex-center;
+            flex-direction:column;
+            transition: all 0.5s ease-in;
+            opacity: 0;
+			pointer-events: none;
+            visibility: hidden;
+        }
+    }
+
     &__mobile{
         border: none;
         background: none;
@@ -74,7 +79,7 @@
         &--icon{
             height: 3rem;
             width: 3rem;
-            color:rgba(0, 0, 0, 1);
+            color:$mobile-nav-icon-color;
         }
 
         &--icon[name="close-circle-sharp"]{
@@ -83,6 +88,7 @@
     }
 
 }
+
 
 .nav-open{
     transition: all 0.5s ease-in;
@@ -95,8 +101,9 @@
 
     & .nav__mobile--icon[name="close-circle-sharp"] {
         display: block;
+        position: relative;
+        z-index: 1;
     }
-
 
     & .nav__mobile--icon[name="menu-sharp"] {
         display: none;

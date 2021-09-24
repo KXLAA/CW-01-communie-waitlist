@@ -121,6 +121,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /**************************/
+  /* BELOW 992px (Small Laptop)*/
+  /**************************/
   /*MOBILE NAV*/
 }
 .nav__link:hover {
@@ -136,6 +139,21 @@ body {
   align-items: center;
   margin: 0rem;
 }
+.nav__item {
+  margin-right: 1.5rem;
+}
+@media screen and (max-width: 62rem) {
+  .nav__button {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 62rem) {
+  .nav__item {
+    margin-right: 0rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+}
 @media screen and (max-width: 62rem) {
   .nav__hidden {
     background-color: rgba(255, 255, 255, 0.97);
@@ -147,26 +165,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.5s ease-in;
     flex-direction: column;
+    transition: all 0.5s ease-in;
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-  }
-}
-.nav__item {
-  margin-right: 1.5rem;
-}
-@media screen and (max-width: 62rem) {
-  .nav__item {
-    margin-right: 0rem;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-  }
-}
-@media screen and (max-width: 62rem) {
-  .nav__button {
-    font-size: 1.5rem;
   }
 }
 .nav__mobile {
@@ -183,7 +186,7 @@ body {
 .nav__mobile--icon {
   height: 3rem;
   width: 3rem;
-  color: black;
+  color: #000000;
 }
 .nav__mobile--icon[name=close-circle-sharp] {
   display: none;
@@ -199,6 +202,8 @@ body {
 }
 .nav-open .nav__mobile--icon[name=close-circle-sharp] {
   display: block;
+  position: relative;
+  z-index: 1;
 }
 .nav-open .nav__mobile--icon[name=menu-sharp] {
   display: none;
@@ -219,6 +224,12 @@ body {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 1rem;
+  /**************************/
+  /*  BELOW 768px (Tablet)  */
+  /**************************/
+  /**************************/
+  /*  BELOW 480px (Mobile)  */
+  /**************************/
 }
 @media screen and (max-width: 62rem) {
   .used-by__logo-container {
@@ -263,6 +274,12 @@ body {
 .header {
   padding-top: 2.5rem;
   padding-bottom: 8rem;
+  /**************************/
+  /* BELOW 992px (Small Laptop)*/
+  /**************************/
+  /**************************/
+  /*   BELOW 768px (Tablet)  */
+  /**************************/
 }
 @media screen and (max-width: 62rem) {
   .header {
@@ -279,6 +296,12 @@ body {
   display: flex;
   align-items: center;
   padding-bottom: 7.5rem;
+  /**************************/
+  /* BELOW 992px (Small Laptop)*/
+  /**************************/
+  /**************************/
+  /*  BELOW 768px (Tablet)   */
+  /**************************/
 }
 @media screen and (max-width: 62rem) {
   .hero {
@@ -294,23 +317,12 @@ body {
   line-height: 4rem;
   padding-bottom: 1.5rem;
 }
-@media screen and (max-width: 48rem) {
-  .hero__heading {
-    font-size: 2.5rem;
-    line-height: 3rem;
-  }
-}
 .hero__description {
   padding-bottom: 1.5rem;
 }
 .hero__image-container {
   width: 80%;
   margin-left: 4rem;
-}
-@media screen and (max-width: 62rem) {
-  .hero__image-container {
-    display: none;
-  }
 }
 .hero__tag {
   font-family: "Nunito", sans-serif;
@@ -335,14 +347,24 @@ body {
   text-decoration: underline;
   font-weight: 700;
 }
+@media screen and (max-width: 62rem) {
+  .hero__image-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .hero__heading {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
 
 .cta {
   display: flex;
-}
-@media screen and (max-width: 48rem) {
-  .cta {
-    flex-direction: column;
-  }
+  align-items: center;
+  /**************************/
+  /*  BELOW 768px (Tablet)  */
+  /**************************/
 }
 .cta__input {
   padding: 1.125rem 1.5rem;
@@ -352,10 +374,8 @@ body {
   border: solid #e3e3e3 0.0625rem;
 }
 @media screen and (max-width: 48rem) {
-  .cta__input {
-    margin-right: 0rem;
-    margin-bottom: 1rem;
-    width: 100%;
+  .cta {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 48rem) {
@@ -380,6 +400,13 @@ body {
     transform: translateX(0rem) translateY(0.125rem);
   }
 }
+@media screen and (max-width: 48rem) {
+  .cta__input {
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+}
 
 .footer {
   padding-top: 3.5rem;
@@ -390,6 +417,9 @@ body {
   line-height: 1.5;
   color: #545454;
   font-weight: bold;
+  /**************************/
+  /*  BELOW 480px (Mobile)  */
+  /**************************/
 }
 @media screen and (max-width: 30rem) {
   .footer {

@@ -10,7 +10,3 @@ btnNavEl.addEventListener('click', function(){
 navOpen.addEventListener('click',function(){
      navEl.classList.toggle('nav-open');
 })
-
-
-
-
